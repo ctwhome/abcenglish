@@ -20,4 +20,22 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+@import "cards";
 
+
+ion-side-menu{
+	i{
+		font-size: 1.5em;
+		vertical-align: text-top;
+		margin-right: 0.2em;
+	}
+
+}
+
+.img-content{
+float: left;
+margin-right: 1em;
+	border-radius: 50%;
+	width: 2.5em !important;
+	height: 2.5em !important;
+}

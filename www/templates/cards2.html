@@ -1,0 +1,43 @@
+<ion-view view-title="English Cards">
+
+<!-- FIXME follow this-->
+<!--http://codepen.io/joanrm20/pen/sGAFe-->
+
+  <ion-nav-view animation="slide-up"></ion-nav-view>
+
+  <script type="text/ng-template" id="/index.html">
+    <ion-view>
+      <ion-nav-page title="title">
+        <ion-content  id="container" du-scroll-container>
+          <div ng-repeat="item in items" >
+            <ion-slide-box show-pager="true">
+              <ion-slide>
+                <a href="#{{item.id}}" du-smooth-scroll du-scrollspy>
+                  <img id="{{item.id}}" style="height:{{item.style}}" class="module bounce" src="{{item.img}}" >
+                </a>
+
+              </ion-slide>
+              <ion-slide>
+                <a href="#{{item.id}}" du-smooth-scroll du-scrollspy>
+                  <img id="{{item.id}}" style="height:{{item.style}}" class="module bounce" src="{{item.img}}" >
+                </a>
+              </ion-slide>
+            </ion-slide-box>
+
+          </div>
+          <!--<ion-infinite-scroll></ion-infinite-scroll>-->
+        </ion-content>
+      </ion-nav-page>
+    </ion-view>
+  </script>
+
+
+
+
+  </body>
+  </html>
+
+  </ion-content>
+</ion-view>
+
+
