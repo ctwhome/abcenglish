@@ -7664,6 +7664,13 @@ td-card img {
   transition: 0.2s opacity linear;
   opacity: 0; }
 
+.input-chat {
+  border-top: 1px solid #ddd;
+  height: 55px; }
+  .input-chat .item {
+    border: none;
+    width: 100%; }
+
 ion-side-menu i {
   font-size: 1.5em;
   vertical-align: text-top;

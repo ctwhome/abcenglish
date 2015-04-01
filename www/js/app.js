@@ -58,18 +58,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic.contrib.ui.tin
                         controller: "CardsCtrl"
                     }
                 }
-            })
-
-            .state('app.cards2', {
-                url: "/cards2",
+            }) 
+            
+            .state('app.conversation', {
+                url: "/conversation",
                 views: {
                     'menuContent': {
-                        templateUrl: "templates/cards2.html",
-                        controller: "Cards2Ctrl"
+                        templateUrl: "templates/conversation.html",
+                        controller: "ConversationCtrl"
                     }
                 }
             })
 
+            
             .state('app.videos', {
                 url: "/videos",
                 views: {
