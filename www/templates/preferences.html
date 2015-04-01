@@ -1,31 +1,42 @@
 <ion-view view-title="Preferences">
-  <ion-content>
-    
-	<div class="list">
+    <ion-content>
 
-		<div class="item item-toggle">
-	    	Enable updates
-	     	<label class="toggle">
-   				<input type="checkbox">
-   				<div class="track">
-     				<div class="handle"></div>
-   				</div>
-			</label>
-	  	</div>
+        <div class="list">
 
-		<div class="item" ng-click="login()">
-	    	Login
-	  	</div>
+            <div class="item item-toggle">
+                Enable updates
+                <label class="toggle">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
 
-		<div class="item item-divider">
-          About us
-        </div>
+            <div class="item" ng-click="login()">
+                Login
+            </div>
 
-		<a class="item" ng-click="">
+
+            <div class="item item-text-wrap center">
+                <button ng-click="loginFacebook()" class="button icon-left ion-social-facebook button-positive">Login with Facebook</button>
+                <!--    <button class="button icon-left ion-social-twitter button-calm">Login with Twitter</button>-->
+                <p>
+                    Clicking the above button will initiate an official browser sign in flow with Facebook. You will be redirected to the Facebook website to enter your credentials.
+                </p>
+            </div>
+
+
+
+            <div class="item item-divider">
+                About us
+            </div>
+
+            <a class="item" ng-click="">
 		   	Drink something with us <i class="icon ion-ios-wineglass-outline"></i>
 		</a>
 
-	</div>
+        </div>
 
-  </ion-content>
+    </ion-content>
 </ion-view>

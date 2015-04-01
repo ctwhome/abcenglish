@@ -8,8 +8,9 @@
  * @requires $scope
  * */
 
+
 angular.module('starter')
-    .controller('ConversationCtrl', function($scope){
-        
-        
+    .controller("ConversationCtrl", function($scope, $cordovaOauth, $localStorage, $location) {
+ 
+    
 });
