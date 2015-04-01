@@ -21,6 +21,9 @@ angular.module('starter', ['ionic', 'ngCordova','ngStorage', 'starter.controller
     })
 
     .config(function ($stateProvider, $urlRouterProvider) {
+    
+    // Facebook Auth
+    openFB.init({appId: '456022761229836'});
         $stateProvider
 
             .state('app', {
