@@ -23,7 +23,7 @@ angular.module('starter', ['ionic', 'ngCordova','ngStorage', 'starter.controller
     .config(function ($stateProvider, $urlRouterProvider) {
     
     // Facebook Auth
-    openFB.init({appId: '456022761229836'});
+    //openFB.init({appId: '456022761229836'});
         $stateProvider
 
             .state('app', {
@@ -31,6 +31,15 @@ angular.module('starter', ['ionic', 'ngCordova','ngStorage', 'starter.controller
                 abstract: true,
                 templateUrl: "templates/menu.html",
                 controller: 'AppCtrl'
+            })
+            .state('app.intro', {
+                url: "/intro",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/intro.html",
+                        controller: 'IntroCtrl'
+                    }
+                }
             })
 
             .state('app.theory', {

@@ -30,7 +30,7 @@
 
         <!--List of contents-->
         <div class="list">
-            <a class="item " ng-repeat="content in contents | filter:query | orderBy: 'title' " 
+            <a class="item " ng-repeat="content in contents | filter:query | orderBy: 'title' "
                href="#/app/contents/{{content.namekey}}">
               <!-- <img class="img-content img-circle" src="{{content.image}}"> -->
               <h2>{{content.title}}</h2>
