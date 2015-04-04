@@ -8,8 +8,7 @@
  * @requires $scope
  * */
 
-angular.module('starter')
-    .controller('contentCtrl', function($scope, $stateParams, $http){
+myApp.controller('contentCtrl', function($scope, $stateParams, $http){
         
         // Valid URL
         // https://api.mongolab.com/api/1/databases/abcenglish/collections/content?q={%22namekey%22:%22business%22}&apiKey=9xkyuiXnGhk_EzhreL1uLaPqIoIIkOxo

@@ -13,26 +13,14 @@
                 </label>
             </div>
 
-            <div class="item" ng-click="login()">
-                Login
+
+            <div class="item item-avatar item-button-right">
+                <img src="{{fbData.pic}}">
+                <h2>{{fbData.name}}</h2>
+                <button ng-click="logout()" class="button">
+                    Log out
+                </button>
             </div>
-
-
-            <!--<div class="item item-text-wrap center">-->
-                <!--<button ng-click="fbLogin()" class="button icon-left ion-social-facebook button-positive">Login with Facebook</button>-->
-                <!--&lt;!&ndash;    <button class="button icon-left ion-social-twitter button-calm">Login with Twitter</button>&ndash;&gt;-->
-                <!--<p>-->
-                    <!--Clicking the above button will initiate an official browser sign in flow with Facebook. You will be redirected to the Facebook website to enter your credentials.-->
-                <!--</p>-->
-            <!--</div>-->
-            <!---->
-
-            <div class="item item-text-wrap center">
-                <button ng-click="facebookLogin()" class="button icon-left ion-social-facebook button-positive">Login with Facebook</button>
-                    <button class="button icon-left ion-social-google button-assertive">Login with Google</button>
-                    <button class="button icon-left ion-social-twitter button-calm">Login with Twitter</button>
-            </div>
-
 
 
             <div class="item item-divider">
@@ -40,14 +28,10 @@
             </div>
 
             <a class="item" ng-click="">
-		   	Drink something with us <i class="icon ion-ios-wineglass-outline"></i>
+                <i class="icon ion-ios-wineglass-outline"></i> Drink something with us
 		</a>
 
         </div>
 
-   
-   
-   
-   
     </ion-content>
 </ion-view>

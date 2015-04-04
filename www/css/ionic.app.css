@@ -7682,3 +7682,17 @@ ion-side-menu i {
   border-radius: 50%;
   width: 2.5em !important;
   height: 2.5em !important; }
+
+/* Empty. Add your own CSS if you like */
+.facebook-blue {
+  background-color: #3B5998 !important;
+  border-color: #3B5998 !important;
+  color: white !important; }
+
+.googleplus-red {
+  background-color: #dd4b39 !important;
+  border-color: #dd4b39 !important;
+  color: white !important; }
+
+body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto; }

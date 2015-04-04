@@ -1,0 +1,33 @@
+<ion-view>
+
+    <ion-header-bar align-title="left" class="bar-stable">
+        <button class="button button-icon icon ion-log-in"></button>
+        <h1 class="title">Sign Up</h1>
+    </ion-header-bar>
+
+    <ion-content class="padding">
+        <button class="button button-block icon-left ion-social-facebook facebook-blue" ng-click="fbLogin()">Facebook</button>
+        <!--<button class="button button-block icon-left ion-social-googleplus googleplus-red" ng-click="googleLogin()">Google+</button>-->
+
+        <div class="card">
+            <div class="item item-divider">
+                Users Facebook data, after login
+            </div>
+            <div class="item item-text-wrap">
+                {{fbData}}
+            </div>
+        </div>
+
+
+
+        <!--<div class="card">-->
+        <!--<div class="item item-divider">-->
+        <!--Users Google+ data, after login-->
+        <!--</div>-->
+        <!--<div class="item item-text-wrap">-->
+        <!--{{googleData}}-->
+        <!--</div>-->
+        <!--</div>-->
+    </ion-content>
+
+</ion-view>
