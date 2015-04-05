@@ -1,39 +1,36 @@
-<ion-view view-title="Conversation">
-    <ion-content>
+<ion-view view-title="Conversation Room">
+
+    <!--Button erase messgs-->
+        <!--<ion-nav-buttons side="primary">-->
+        <!--<button class="button button-icon icon ion-ios-trash-outline"-->
+        <!--ng-click="data.showDelete = !data.showDelete; data.showReorder = false">-->
+        <!--</button>-->
+        <!--</ion-nav-buttons>-->
 
 
 
-        
+    <ion-pane>
 
-        <div class="list">
-           
-            <!-- Facebook profile -->
-            <a class="item item-avatar" href="#">
-                <img src="http://graph.facebook.com/{{user.id}}/picture?width=270&height=270"/>
-                <h2>{{user.name}}</h2>
-                <p>{{user.city}} Back off, man. I'm a scientist.</p>
-            </a>
+        <ion-content class="padding" start-y="120">
+            <ol class="messages">
+                <li ng-repeat="message in messages" ng-bind-html="message.content"></li>
+            </ol>
+        </ion-content>
+        <ion-footer-bar class="bar-frosted">
 
-            <a class="item item-avatar" href="#">
-                <img src="venkman.jpg">
-                <h2>Venkman</h2>
-                <p>Back off, man. I'm a scientist.</p>
-            </a>
-
-        </div>
-        
-
-    </ion-content>
-    
-   <div class="bar bar-footer input-chat">
-
-            <div class="item item-input-inset">
                 <label class="item-input-wrapper">
-                    <input type="text" placeholder="Start talking">
+                    <input id="msgInput" type="text"
+                           placeholder="Start talking"
+                           ng-keyup="$event.keyCode == 13 && sendMsg()">
                 </label>
-                <button class="button button-small">
+                <button ng-click="sendMsg()" class="button button-small">
                     <i class="ion-paper-airplane"></i>
                 </button>
 
-</div>
-</ion-view>
+
+        </ion-footer-bar>
+    </ion-pane>
+
+    </ion-view>
+
+

@@ -4,7 +4,14 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var myApp = angular.module('starter', ['ionic', 'ngCordova','ngStorage', 'starter.controllers', 'ionic.contrib.ui.tinderCards', 'ui.router']);
+var myApp = angular.module('starter', [
+        'ionic',
+        'ngCordova',
+        'ngStorage',
+        'starter.controllers',
+        'ionic.contrib.ui.tinderCards',
+        'ui.router',
+        'ionic.contrib.frostedGlass']);
 
 
 
