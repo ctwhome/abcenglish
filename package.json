@@ -20,5 +20,8 @@
       "locator": "plugins/phonegap-facebook-plugin"
     },
     "nl.x-services.plugins.googleplus"
+  ],
+  "cordovaPlatforms": [
+    "android"
   ]
 }
