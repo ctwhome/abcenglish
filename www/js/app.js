@@ -11,7 +11,8 @@ var myApp = angular.module('starter', [
         'starter.controllers',
         'ionic.contrib.ui.tinderCards',
         'ui.router',
-        'ionic.contrib.frostedGlass']);
+        'ionic.contrib.frostedGlass',
+        'firebase']);
 
 
 

@@ -10,7 +10,25 @@
 
 
 angular.module('starter')
-    .controller("ConversationCtrl", function($scope, $ionicFrostedDelegate, $ionicScrollDelegate) {
+    .controller('ConversationCtrl',['conversationService',
+    function($scope, $ionicFrostedDelegate, $ionicScrollDelegate, conversationService) {
+
+
+        /**
+         * connection to firebase
+         */
+        //Set messages to chatMessages factory which returns the firebase data
+        $scope.messages = conversationService;
+
+        //Initialize message object
+        $scope.message = {};
+
+        //Add message to the firebase data
+        $scope.addMessage = function(message) {
+            $scope.messages.$add({content: message});
+            //we reset the text input field to an empty string
+            $scope.message.theMessage = "";
+        };
 
 
         /**
@@ -24,8 +42,6 @@ angular.module('starter')
             $scope.addMsg(inputMsg.val());
             inputMsg.val("");
         }
-
-
 
         /**
          * Add into the list
@@ -87,4 +103,4 @@ angular.module('starter')
             }
         ];
 
-});
+}]);

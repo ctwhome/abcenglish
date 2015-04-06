@@ -1,36 +1,83 @@
-<ion-view view-title="Conversation Room">
+<style>
+    .chatbox {
+        position:absolute;
+        bottom: 0px;
+    }
+    .message-input {
+        margin-top: 10px;
+    }
 
-    <!--Button erase messgs-->
-        <!--<ion-nav-buttons side="primary">-->
-        <!--<button class="button button-icon icon ion-ios-trash-outline"-->
-        <!--ng-click="data.showDelete = !data.showDelete; data.showReorder = false">-->
-        <!--</button>-->
-        <!--</ion-nav-buttons>-->
+    .chatbox-container {
+        font-size: 1.2rem;
+        color: rgba(0,0,0,0.8);
+        position:relative;
+        height: 200px;
+        border: 1px solid rgba(0,0,255, 0.2);
+        padding: 10px;
+        line-height: 29px;
+        overflow: hidden;
+    }
+</style>
 
-
-
-    <ion-pane>
-
-        <ion-content class="padding" start-y="120">
-            <ol class="messages">
-                <li ng-repeat="message in messages" ng-bind-html="message.content"></li>
-            </ol>
-        </ion-content>
-        <ion-footer-bar class="bar-frosted">
-
-                <label class="item-input-wrapper">
-                    <input id="msgInput" type="text"
-                           placeholder="Start talking"
-                           ng-keyup="$event.keyCode == 13 && sendMsg()">
+<ion-header-bar class="bar-stable">
+    <h1 class="title">My Anonymous Chat App</h1>
+</ion-header-bar>
+<ion-content>
+    <div class="row row-bottom">
+        <div class="col">
+            <div class="chatbox-container">
+                <ul class="chatbox">
+                    <!-- We output the messages -->
+                    <li ng-repeat="msg in messages">{{msg.content}}</li>
+                </ul>
+            </div>
+            <form name="myform" ng-submit="addMessage(message.theMessage)">
+                <label class="item item-input message-input">
+                    <!-- the input text field is bound to message.theMessage -->
+                    <input type="text" ng-model="message.theMessage" placeholder="Type your message..."
+                            />
                 </label>
-                <button ng-click="sendMsg()" class="button button-small">
-                    <i class="ion-paper-airplane"></i>
+                <button class="button button-block button-dark" action="submit">
+                    Send
                 </button>
+            </form>
+        </div>
+    </div>
+</ion-content>
 
 
-        </ion-footer-bar>
-    </ion-pane>
 
-    </ion-view>
+<!--<ion-view view-title="Conversation Room">-->
+
+    <!--&lt;!&ndash;Button erase messgs&ndash;&gt;-->
+    <!--&lt;!&ndash;<ion-nav-buttons side="primary">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button class="button button-icon icon ion-ios-trash-outline"&ndash;&gt;-->
+    <!--&lt;!&ndash;ng-click="data.showDelete = !data.showDelete; data.showReorder = false">&ndash;&gt;-->
+    <!--&lt;!&ndash;</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;</ion-nav-buttons>&ndash;&gt;-->
 
 
+
+    <!--<ion-pane>-->
+
+        <!--<ion-content class="padding" start-y="120">-->
+            <!--<ol class="messages">-->
+                <!--<li ng-repeat="message in messages" ng-bind-html="message.content"></li>-->
+            <!--</ol>-->
+        <!--</ion-content>-->
+        <!--<ion-footer-bar class="bar-frosted">-->
+
+            <!--<label class="item-input-wrapper">-->
+                <!--<input id="msgInput" type="text"-->
+                       <!--placeholder="Start talking"-->
+                       <!--ng-keyup="$event.keyCode == 13 && sendMsg()">-->
+            <!--</label>-->
+            <!--<button ng-click="sendMsg()" class="button button-small">-->
+                <!--<i class="ion-paper-airplane"></i>-->
+            <!--</button>-->
+
+
+        <!--</ion-footer-bar>-->
+    <!--</ion-pane>-->
+
+<!--</ion-view>-->
