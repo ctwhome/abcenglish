@@ -22,7 +22,6 @@ angular.module('starter')
         //FIXME
         // Installing firebase angular https://www.firebase.com/docs/web/libraries/angular/quickstart.html
 
-
         /**
          * listen for the changes in the database
          */
@@ -57,8 +56,8 @@ angular.module('starter')
         $scope.addMsg = function(name, msg){
 
             // Add class itsme for the bubbles
-            name == me ?  $scope.itsme ="right":  $scope.itsme ="";
-
+            name == me ? $scope.itsme ="right": $scope.itsme ="";
+console.log(msg);
             $scope.messages.push({
                 content: '<h3>'+name+'</h3><p>'+msg+'</p>'
             });
